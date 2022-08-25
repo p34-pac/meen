@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Settings</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+        <link rel="stylesheet" media="all" href="css/style.css">
+		<link rel="shortcut icon" href="./images/settings.ico">
+        <script src="fancy.js"></script>
+		<script src="courses.js"></script>
+		<style>
+			.settings a{
+				cursor: pointer;
+				text-decoration: none;
+			}
+
+			.settings h1 em img{
+				width: 30px;
+				float: right;
+			}
+			.settings h1{
+				color: rgb(104, 35, 35);
+				font-family: Georgia, 'Times New Roman', Times, serif;
+				font-weight: bolder;
+				background-color: rgb(248, 243, 237);
+				border: 2px solid gray;
+				margin-top: 3px;
+				box-sizing: border-box;
+				box-shadow: 2px 2px 2px rgb(34, 34, 66);
+			}
+			.settings h1:hover{
+				background-color: rgb(248, 200, 141);
+				border: 5px solid rgba(17, 20, 199, 0);
+				margin: 10px;
+				box-sizing: border-box;
+				box-shadow: 4px 4px 4px rgb(49, 49, 61);
+			}
+
+		</style>
+
+        <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+<body >
+    <header id="header">
+		<div class="contor">
+			<p id="logo"><img src="./images/jpts.png"></p>
+			<div class="menu-trigger">
+				<input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+      <header> Menu</header>
+	  <a id="anch" href="index.html">
+        <i class="fas fa-sliders-h"></i>
+        <span>DashBoard</span>
+      </a>
+      <a id="anch" href="cuorses.html" >
+        <i class="fas fa-qrcode"></i>
+        <span>Courses</span>
+      </a>
+      <!-- <a id="anch" href="gallery.html">
+        <i class="fas fa-link"></i>
+        <span>Students</span>
+      </a> -->
+
+      <a id="anch" href="events.html">
+         <i class="fas fa-calendar"></i>
+        <span>Events</span>
+      </a>
+      <a id="anch" href="about.html"  >
+        <i class="far fa-question-circle"></i>
+        <span>About</span>
+      </a>
+
+      <a id="anch" href="#fancy" onclick="fancy()">
+        <i class="far fa-envelope"></i>
+        <span>Contact</span>
+      </a>
+	  <a href="settings.html" id="anch" class="active">
+        <i class="far fa-envelope"></i>
+        <span>Settings</span>
+      </a>
+    </div>
+			</div>
+			<nav id="menu">
+				<ul>
+					<li><a href="index.html" >DashBoard</a></li>
+					<li><a href="cuorses.html">Courses</a></li>
+					<li><a href="events.html">Events</a></li>
+ 				</ul>
+				<ul>
+					<li><a href="about.html" >About</a></li>
+					<li><a href="#fancy" class="get-contact" onclick="fancy()">Contact</a></li>
+					<li class="current"><a href="settings.html">settings</a></li>
+
+   				</ul>
+			</nav>
+			<!-- / navigation -->
+		</div>
+		<!-- / container -->
+	
+	</header>
+
+	<div class="slider">
+		<ul class="bxslider">
+			<li>
+				<div class="container">
+					<div class="info">
+						<h2>It’s Time to <br><span>Get back to school</span></h2>
+						<a href="#">Check out our new programs</a>
+					</div>
+				</div>
+				<!-- / content -->
+			</li>
+			<li>
+				<div class="container">
+					<div class="info">
+						<h2>It’s Time to <br><span>Get back to school</span></h2>
+						<a href="#">Check out our new programs</a>
+					</div>
+				</div>
+				<!-- / content -->
+			</li>
+			<li>
+				<div class="container">
+					<div class="info">
+						<h2>It’s Time to <br><span>Get back to school</span></h2>
+						<a href="#" >Check out our new programs</a>
+					</div>
+				</div>
+				<!-- / content -->
+			</li>
+		</ul>
+		<div class="bg-bottom"></div>
+	</div>
+	<div class="settings">
+		<a href="profile.html"><h1>Profile <em><img src="./images/switchin.png" alt="hmm"></em></h1></a>
+
+		<a href="profile.html"><h1>Learning info <em><img src="./images/switchin.png" alt="hmm"></em></h1></a>
+
+		<a href="profile.html"><h1>Learning info <em><img src="./images/switchin.png" alt="hmm"></em></h1></a>
+
+		<a href="profile.html"><h1>Learning info <em><img src="./images/switchin.png" alt="hmm"></em></h1></a>
+
+		<a href="profile.html"><h1>Learning info <em><img src="./images/switchin.png" alt="hmm"></em></h1></a>
+
+		<a href="profile.html"><h1>Learning info <em><img src="./images/switchin.png" alt="hmm"></em></h1></a>
+
+		<a href="profile.html"><h1>Learning info <em><img src="./images/switchin.png" alt="hmm"></em></h1></a>
+
+		<a href="profile.html"><h1>Learning info <em><img src="./images/switchin.png" alt="hmm"></em></h1></a>
+
+		
+	</div>
+
+
+
+
+
+<!--
+										attendance
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+<!-- <div id="atte" style="margin: 15%; background: rgba(174, 163, 185, 0.514);  color: rgb(0, 0, 0);">
+<p style=" background: rgba(174, 163, 185, 0.514); text-align: center;  color: rgb(0, 0, 0); font-size: larger; font-family: Georgia, 'Times New Roman', Times, serif; font-weight: bolder;">Attendance</p>
+<label for="attend" style="margin: 15%; background: rgba(174, 163, 185, 0.514);  color: rgb(0, 0, 0);"><em style="cursor: text;" id="percent"> 0%</em><input type="range"  style="width: 50%; height: 30px; cursor: text;" ><b style="cursor: text;" id="percent"> 100%</b></label>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    	
+	<footer id="footer">
+		<div class="container">
+			<section>
+				<article class="col-1">
+					<h3>Contact</h3>
+					<ul>
+						<li class="address"><a href="#">contact us at the various <br>JPTS centers</a></li>
+						<li class="mail"><a href="mailto:peterpaultolulope@gmail.com">peterpaultolulope@gmail.com</a></li>
+						<li class="phone last"><a href="tel:08109080838">08109080838</a></li>
+					</ul>
+				</article>
+				<article class="col-2">
+					<h3>Forum topics</h3>
+					<ul>
+						<li><a href="#">Malaria</a></li>
+						<li><a href="#">Robotics And AI intense</a></li>
+						<li><a href="#">Politics</a></li>
+						<li><a href="#">First Aid</a></li>
+						<li class="last"><a href="#">Architect vitae  </a></li>
+					</ul>
+				</article>
+				<article class="col-3">
+					<h3>Social media</h3>
+					<p>You can contact us at this social media</p>
+					<ul>
+						<li class="facebook"><a href="#">Facebook</a></li>
+						<li class="google-plus"><a href="#">Google+</a></li>
+						<li class="twitter"><a href="#">twittme9770</a></li>
+						<li class="pinterest"><a href="#">Pinterest</a></li>
+					</ul>
+				</article>
+				<article class="col-4">
+					<h3>Newsletter</h3>
+					<p>Write a NewsLetter....</p>
+					<form action="#">
+						<input placeholder="Email address..." type="text">
+						<button id="subscribe" style="background-color: rgba(230, 18, 18, 0.596);" type="submit">Subscribe</button>
+					</form>
+					<ul>
+						<li><a href="#"></a></li>
+					</ul>
+				</article>
+			</section>
+			<div id="fancy">
+				<h2>Request information</h2>
+				<form action="#">
+					<div class="left">
+						<fieldset class="mail"><input placeholder="Email address..." type="text"></fieldset>
+						<fieldset class="name"><input placeholder="Name..." type="text"></fieldset>
+						<select class="subject" onclick="addOption()" id="add">
+							<option id="added">Choose subject...</option>
+							<option>Choose subject...</option>
+							<option>Choose subject...</option>
+							<option value="more" ><p>more...</p> </option>
+						</select>
+					</div>
+					<div class="right">
+						<fieldset class="question"><textarea placeholder="Question..."></textarea></fieldset>
+					</div>
+					<div class="btn-holder">
+						<button class="btn blue" type="submit">Send request</button>
+					</div>
+				</form>
+			</div>
+			<p class="copy">Copyright 2022 JPTS ins. Designed by <a href="http://www.vandelaydesign.com/" title="Designed by Vandelay Design" target="_blank">paul</a>. All rights reserved.</p>
+		</div>
+		<!-- / container -->
+	</footer>
+	<!-- / footer -->
+
+
+
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script>window.jQuery || document.write("<script src='js/jquery-1.11.1.min.js'>\x3C/script>")</script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

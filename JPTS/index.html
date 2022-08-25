@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>JPTS scholarly</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<link rel="stylesheet" media="all" href="css/style.css">
+	<link rel="shortcut icon" href="./images/jpts.ico">
+	<script src="fancy.js"></script>
+	<style>
+		#contentAdder input{
+			color: white;
+		}
+		#addA{
+			display: block;
+			max-height: 40px;
+			
+		}
+		#addT{
+			padding: 10%;
+		}
+		#read{
+			display: flex;
+			flex-direction: row;
+			justify-content: end;
+			color: rgb(0, 0, 0);
+			cursor: pointer;
+		}
+	
+		#read:hover{
+			text-decoration: overline;
+		}
+	
+		#less{
+			display: none;
+		}
+		.article{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.article article{
+			margin-top: 20px;
+			max-height: auto;
+			border-top: 2px solid grey;
+			border-right: 2px solid grey;
+		}
+		#new{
+			display: inline-block;
+		}
+
+		@media screen and (max-width: 390px){
+
+			.btn-holder{
+				display: flex;
+				justify-content: center;
+
+
+			}
+			.news .btn-holder a b, .news .btn-holder p b {
+
+				display: none;
+				
+			}
+			span{
+				display: flex;
+			}
+			#footer .col-1 li a:after {
+				background: url(../images/ico_contacts.png) no-repeat;
+				width: 32px;
+				height: 32px;
+				position: absolute;
+				top: 4px;
+				left: 0;
+				content: "";
+			}
+		}
+		.profile{
+			display: flex;
+			justify-content: first baseline;
+			margin-left: 10px;
+			position: absolute;
+			z-index: 10;
+			left: 5%;
+			top: 10%;
+			
+		}
+		.profile h1 #userName{
+			position: absolute;
+			top: 45%;
+			left: 25%;
+			font-size: large;
+
+		}
+		.profile h1 #regNo {
+			position: absolute;
+			top: 55%;
+			left: 25%;
+			font-size: large;
+
+		}
+		.profile h1 #levSem {
+			position: absolute;
+			top: 65%;
+			left: 25%;
+			font-size: large;
+
+		}
+		.profile img{
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			border: 5px solid gray;
+			cursor: pointer;
+
+
+		}
+		.profile h1 span img{
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			position: absolute;
+			top: 75%;
+			left: 15%;
+			border: 2px solid gray;
+			cursor: pointer;
+		}
+		#prof{
+			display: none;
+		}
+		body #prof img{
+		
+			width: 90%;
+			height: 500px;
+			position: absolute;
+			z-index: 100;
+			left: 5%;
+			top: 10%;
+			
+			
+		}
+		#body{
+			filter: blur(0px);
+		}
+
+	</style>
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body >
+    <header id="header">
+		<div class="contor">
+			<p id="logo"><img src="./images/jpts.png"></p>
+			<div class="menu-trigger">
+				<input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+      <header> Menu</header>
+	  <a id="anch" href="index.html"  class="active">
+        <i class="fas fa-sliders-h"></i>
+        <span>DashBoard</span>
+      </a>
+      <a id="anch" href="cuorses.html" >
+        <i class="fas fa-qrcode"></i>
+        <span>Courses</span>
+      </a>
+      <!-- <a id="anch" href="gallery.html">
+        <i class="fas fa-link"></i>
+        <span>Students</span>
+      </a> -->
+
+      <a id="anch" href="events.html">
+         <i class="fas fa-calendar"></i>
+        <span>Events</span>
+      </a>
+      <!-- <a id="anch" href="about.html">
+        <i class="far fa-question-circle"></i>
+        <span>About</span>
+      </a> -->
+
+      <!-- <a id="anch" href="#fancy" onclick="fancy()">
+        <i class="far fa-envelope"></i>
+        <span>Contact</span>
+      </a> -->
+	  <a href="profile.html" id="anch" onclick="settings()">
+        <i class="far fa-envelope"></i>
+        <span>Profile</span>
+      </a>
+    </div>
+			</div>
+			<nav id="menu">
+				<ul>
+					<li class="current"><a href="index.html" >DashBoard</a></li>
+					<li><a href="cuorses.html">Courses</a></li>
+ 				</ul>
+				<ul>
+					<li><a href="events.html">Events</a></li>
+
+					<!-- <li><a href="about.html" >About</a></li> -->
+					<!-- <li><a href="#fancy" class="get-contact" onclick="fancy()">Contact</a></li> -->
+					<li><a href="profile.html">Profile</a></li>
+
+   				</ul>
+			</nav>
+			<!-- / navigation -->
+		</div>
+		<!-- / container -->
+
+	
+	</header>
+	<!-- / header -->
+	<div id="everything">
+	<div class="slider">
+		<ul class="bxslider">
+			<li>
+				<div class="container">
+					<div class="info">
+						<h2>It’s Time to <br><span>Get back to school</span></h2>
+						<a href="#">Check out our new programs</a>
+					</div>
+				</div>
+				<!-- / content -->
+			</li>
+			<li>
+				<div class="container">
+					<div class="info">
+						<h2>It’s Time to <br><span>Get back to school</span></h2>
+						<a href="#">Check out our new programs</a>
+					</div>
+				</div>
+				<!-- / content -->
+			</li>
+			<li>
+				<div class="container">
+					<div class="info">
+						<h2>It’s Time to <br><span>Get back to school</span></h2>
+						<a href="#">Check out our new programs</a>
+					</div>
+				</div>
+				<!-- / content -->
+			</li>
+		</ul>
+		<div class="bg-bottom"></div>
+	</div>
+	
+	<section class="posts">
+		<!-- <div class="container">
+			<article>
+				<div class="pic"><img width="121" src="images/2.png" alt=""></div>
+				<div class="info">
+					<h3>The best learning methods</h3>
+					<p> This institute will provide a very satisfying learning environment</p>	
+				</div>
+			</article>
+			<article>
+				<div class="pic"><img width="121" src="images/3.png" alt=""></div>
+				<div class="info">
+					<h3>Awesome results of our students</h3>
+					<p>we have brought up student with best results</p>	
+				</div>
+			</article>
+		</div> -->
+		<!-- / container -->
+	</section>
+
+	<section class="news">
+		<div class="container">
+			<h2>Latest news and announcement</h2>
+			<div class="article">
+				<article>
+					<div class="pic"><img src="images/1.png" alt=""></div>
+					<div class="info">
+						<h4>The Original Slap</h4>
+						<p class="date">11 Jan, 2022,</p><p class="date"> paul</p>
+						<p>This girl logged out of life immediatly she received this slap from a man in ijako. She was... </p>
+						<a class="more" href="#">Read more</a>
+					</div>
+				</article>
+				<article>
+					<div class="pic"><img src="images/1.png" alt=""></div>
+					<div class="info">
+						<h4>The Original Slap</h4>
+						<p class="date">11 Jan, 2022,</p><p class="date"> paul</p>
+						<p>This girl logged out of life immediatly she received this slap from a man in ijako. She was... </p>
+						<a class="more" href="#">Read more</a>
+					</div>
+				</article>
+				<article>
+					<div class="pic"><img src="images/1.png" alt=""></div>
+					<div class="info">
+						<h4>The Original Slap</h4>
+						<p class="date">11 Jan, 2022,</p><p class="date"> paul</p>
+						<p>This girl logged out of life immediatly she received this slap from a man in ijako. She was... </p>
+						<a class="more" href="#">Read more</a>
+					</div>
+				</article>
+				<article id="new">
+					<div class="pic" ><img src="images/1_1.png" alt=""></div>
+					<div class="info">
+						<h4 id="headA">ddd </h4>
+						<p class="date" id="dateA">eee</p><p class="date" id="writeA">eee </p>
+						<p id="addA" style="max-height: 40px; max-width: 250px;">					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem labore quisquam, ipsum quidem alias tempore sapiente numquam quod iure fugiat rerum. Dicta maiores hic beatae repudiandae exercitationem, saepe commodi sunt minima eveniet adipisci mollitia nemo quibusdam deleniti animi qui quasi placeat voluptas repellendus debitis, veritatis voluptatem rerum officia quod! Tempora aspernatur recusandae laboriosam sed vero itaque, quas corrupti dolorem quia numquam et. Molestiae, sapiente! Sequi tenetur, ex adipisci laborum distinctio harum. Iure impedit aspernatur odio consequatur suscipit in perferendis, quasi neque. Consequatur, est necessitatibus, voluptatum officiis dolor doloremque quo debitis aut eveniet non saepe nobis nihil. Quos fugit explicabo ea!
+						</p>
+					</div>
+					<div id="read">
+						
+						<p id="more" onclick="more()">read more</p>
+						<p id="less" onclick="less()">read less</p>
+					</div>
+					
+				</article>
+	
+				<article>
+					<div class="pic"><img src="images/1.png" alt=""></div>
+					<div class="info">
+						<h4>The Original Slap</h4>
+						<p class="date">11 Jan, 2022,</p><p class="date"> paul</p>
+						<p>This girl logged out of life immediatly she received this slap from a man in ijako. She was... </p>
+						<a class="more" href="#">Read more</a>
+					</div>
+				</article>
+				<article>
+					<div class="pic"><img src="images/1.png" alt=""></div>
+					<div class="info">
+						<h4>The Original Slap</h4>
+						<p class="date">11 Jan, 2022,</p><p class="date"> paul</p>
+						<p>This girl logged out of life immediatly she received this slap from a man in ijako. She was... </p>
+						<a class="more" href="#">Read more</a>
+					</div>
+				</article>
+								<article>
+				<div class="pic"><img src="images/1_1.png" alt=""></div>
+				<div class="info">
+					<h4>Vaccines and Us</h4>
+					<p class="date">29 Feb, 2022,</p><p class="date"> Mr John Crown</p>
+					<p style="max-height: 50px; max-width: 250px;">Vaccination is an important aspects of our activity today. it reduces...</p>
+					<a class="more" href="#">Read more</a>
+				</div>
+			</article>
+		</div>
+			<div class="btn-holder">
+				 <a class="btn" href="#">See <b>more</b> news</a><!--<p class="btn" onclick="newContent1()">Add <b>new</b> content</p> -->
+			</div>
+			<!-- <div id="contentAdder" class="contentAdder">
+				<input  type="text" placeholder="please who is our writer" id="writeT" required>
+				<input type="date" id="dateT" required>
+				<input  type="text" placeholder="Add a Heading" id="headT" required>
+				<textarea name="content" id="addT" cols="30" rows="10" required></textarea>
+				<input type="button" value="submit" class="sub" onclick="submitContent()"><input type="button" value="cancel" class="can" onclick="cancelContent()">
+			</div> -->
+
+		</div>
+		<!-- / container -->
+	</section>
+
+	<section class="events">
+		<div class="container">
+			<h2>Upcoming events</h2>
+			<article>
+				<div class="current-date">
+					<p>April</p>
+					<p class="date">15</p>
+				</div>
+				<div class="info">
+				<p>the school change gathering</p>
+					<a class="more" href="events.html">Read more</a>
+				</div>
+			</article>
+			<article>
+				<div class="current-date">
+					<p>April</p>
+					<p class="date">17</p>
+				</div>
+				<div class="info">
+					<p>the april 17 man of the semester</p>
+					<a class="more" href="events.html">Read more</a>
+				</div>
+			</article>
+			<article>
+				<div class="current-date">
+					<p>April</p>
+					<p class="date">25</p>
+				</div>
+				<div class="info">
+					<p>the april christmas day</p>
+					<a class="more" href="events.html">Read more</a>
+				</div>
+			</article>
+			<article>
+				<div class="current-date">
+					<p>April</p>
+					<p class="date">29</p>
+				</div>
+				<div class="info">
+					<p>I will be resuming school on this date. So y'all should be expecting me.</p>
+					<a class="more" href="events.html">Read more</a>
+				</div>
+			</article>
+			<div class="btn-holder">
+				<a class="btn blue" href="#">See all upcoming events</a>
+			</div>
+		</div>
+		<!-- / container -->
+	</section>
+	<div class="container">
+		<a href="#fancy" class="info-request" onclick="fancy()">
+			<em class="holder">
+				<em class="title">Request information</em>
+				<em class="text">Do you have some questions? Fill the form and get an answer!</em>
+			</em>
+			<em class="arrow"></em>
+		</a>
+		<div id="fancy">
+			<h2>Request information</h2>
+			<form action="#">
+				<div class="left">
+					<fieldset class="mail"><input placeholder="Email address..." type="text"></fieldset>
+					<fieldset class="name"><input placeholder="Name..." type="text"></fieldset>
+					<select class="subject" onclick="addOption()" id="add">
+						<option id="added">Choose subject...</option>
+						<option>Choose subject...</option>
+						<option>Choose subject...</option>
+						<option value="more" ><p>more...</p> </option>
+					</select>					</div>
+				<div class="right">
+					<fieldset class="question"><textarea placeholder="Question..."></textarea></fieldset>
+				</div>
+				<div class="btn-holder">
+					<button class="btn blue" type="submit">Send request</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+	<footer id="footer">
+		<div class="container">
+			<section>
+				<article class="col-1">
+					<h3>Contact</h3>
+					<ul>
+						<li class="address"><a href="#">contact us at your various <br>JPTS centers</a></li>
+						<li class="mail"><a href="mailto:peterpaultolulope@gmail.com">jptsschorlarly@gmail.com</a></li>
+						<li class="phone last"><a href="tel:08109080838">+1 234 567 890</a></li>
+					</ul>
+				</article>
+				<article class="col-2">
+					<h3>Forums/bootcamp</h3>
+					<ul>
+						<li><a href="forum/boot.html" target="blank">Health care management</a></li>
+						<li><a href="forum/boot.html" target="blank">Computer science / Comuter and software engineering</a></li>
+						<li><a href="forum/boot.html" target="blank">Media and mass commmunication</a></li>
+						<li><a href="forum/boot.html" target="blank">Oil and gas management</a></li>
+						<li class="last"><a href="forum/boot.html" target="blank">Engineering students  </a></li>
+					</ul>
+				</article>
+				<article class="col-3">
+					<h3>Social media</h3>
+					<p>You can contact us at this social media</p>
+					<ul>
+						<li class="facebook"><a href="#">Facebook</a></li>
+						<li class="google-plus"><a href="#">Google+</a></li>
+						<li class="twitter"><a href="#">Twitter</a></li>
+						<li class="pinterest"><a href="#">Instagram</a></li>
+					</ul>
+				</article>
+				<!-- <article class="col-4">
+					<h3>Newsletter</h3>
+					<p>Write a NewsLetter....</p>
+					<form action="#">
+						<input placeholder="Email address..." type="text">
+						<button id="subscribe" style="background-color: rgba(230, 18, 18, 0.596);" type="submit">Subscribe</button>
+					</form>
+					<ul>
+						<li><a href="#"></a></li>
+					</ul>
+				</article> -->
+			</section>
+			
+			<p class="copy">Copyright 2022 JPTS ins. Designed by <a href="http://www.vandelaydesign.com/" title="Designed by Vandelay Design" target="_blank">paul</a>. All rights reserved.</p>
+		</div>
+		<!-- / container -->
+	</footer>
+	<!-- / footer -->
+
+
+
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script>window.jQuery || document.write("<script src='js/jquery-1.11.1.min.js'>\x3C/script>")</script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+</div>
+</body>
+</html>

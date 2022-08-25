@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>JPTS scholarly</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<link rel="stylesheet" media="all" href="css/style.css">
+	<link rel="shortcut icon" href="./images/jpts.ico">
+	<script src="fancy.js"></script>
+	<style>
+		#contentAdder input{
+			color: white;
+		}
+		#addA{
+			display: block;
+			max-height: 40px;
+		}
+		#read{
+			display: flex;
+			flex-direction: row;
+			justify-content: end;
+			color: rgb(0, 0, 0);
+			cursor: pointer;
+		}
+	
+		#read:hover{
+			text-decoration: overline;
+		}
+	
+		#less{
+			display: none;
+		}
+		.article{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.article article{
+			margin-top: 20px;
+			max-height: auto;
+			border-top: 2px solid grey;
+			border-right: 2px solid grey;
+		}
+		#new{
+			display: inline-block;
+		}
+
+		@media screen and (max-width: 390px){
+
+			.btn-holder{
+				display: flex;
+				justify-content: center;
+
+
+			}
+			.news .btn-holder a b, .news .btn-holder p b {
+
+				display: none;
+				
+			}
+			span{
+				display: flex;
+			}
+			#footer .col-1 li a:after {
+				background: url(../images/ico_contacts.png) no-repeat;
+				width: 32px;
+				height: 32px;
+				position: absolute;
+				top: 4px;
+				left: 0;
+				content: "";
+			}
+		}
+        .profile{
+            width: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 150px;
+        }
+        .profile h1{
+            width: 100%;
+            text-align: center;
+        }
+        .profile h1 #profim img{
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid grey;
+
+
+            
+            
+        }
+
+
+        <!-- .profile h1 #profimadd img{
+    
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 60%;
+            left: 57%;
+            border: 2px solid grey;
+            border-radius: 50%;
+
+        } -->
+
+        .profile h1 p{
+            text-align: center;
+        }
+
+        #Bio{
+            width: 50%;
+            height: auto;
+            zoom: 50%;
+            margin-left: 25%;
+            text-transform: none;
+            
+        }
+        .result{
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            background-color: antiquewhite;
+            margin-left: 5%;
+            margin-right: 5%;
+            border-radius: 20px;
+
+
+
+        }
+        .resContent{
+            width:100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .le100, .le200, .le300, .le400, .le500{
+            width: 300px;
+            height: 200px;
+            background: aliceblue;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            margin-right: 20px;
+            margin-left: 20px;
+            border: 2px solid darkblue;
+            border-radius: 20px 20px 0px 20px;
+            text-align: center;
+            
+        } 
+
+        .le100:hover, .le200:hover, .le300:hover, .le400:hover, .le500:hover{
+            width: 310px;
+            height: 210px;
+            transition: all 5s ease;
+            
+        } 
+        #res100 p, #res200 p, #res300 p, #res400 p, #res500 p{
+            margin-top: 10px;
+        } 
+        #res100 button a, #res200 button a, #res300 button a, #res400 button a, #res500 button a{
+            color: rgb(224, 240, 240);
+            text-decoration: none;
+        } 
+        #res100 button, #res200 button, #res300 button, #res400 button, #res500 button{
+            margin-top: 30px;
+            width: 80px;
+            background-color: grey;
+            height: 30px;
+        } 
+        .resContent #reHead{
+            background-color: rgb(226, 238, 240);
+            width: 50%;
+            margin-left: 25%;
+            margin-right: 25%;
+            text-decoration: rgb(159, 177, 192);
+            box-shadow: 2px 2px 2px rgb(113, 113, 136);
+        }
+
+        .coverpho {
+            width: 100%;
+            height: 35%;
+            position: absolute;
+            top: 0%;
+            z-index: -2;
+            border: 5px solid grey;
+        }
+        
+        .coverpho img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+            filter: blur(5px);
+        }
+
+        .content{
+            background-color: aliceblue;
+            border-radius: 30px;
+        }
+        .title{
+            display: flex;
+            justify-content: center;
+            
+        }
+        .title h2{
+            color: black;
+            margin-top: 10px;
+            background-color: rgb(184, 187, 189);
+            width: 150px;
+            height: 60px;
+            box-shadow: -2px 2px 2px rgb(118, 118, 184);
+            
+        }
+        p{
+            text-transform: none;
+        }
+        #username{
+            text-transform: lowercase !important;
+        }
+	</style>
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+    
+
+<header id="header">
+    <div class="contor">
+        <p id="logo"><img src="./images/jpts.png"></p>
+        <div class="menu-trigger">
+            <input type="checkbox" id="check">
+<label for="check">
+  <i class="fas fa-bars" id="btn"></i>
+  <i class="fas fa-times" id="cancel"></i>
+</label>
+<div class="sidebar">
+  <header> Menu</header>
+  <a id="anch" href="index.html"  class="active">
+    <i class="fas fa-sliders-h"></i>
+    <span>DashBoard</span>
+  </a>
+  <a id="anch" href="cuorses.html" >
+    <i class="fas fa-qrcode"></i>
+    <span>Courses</span>
+  </a>
+  <!-- <a id="anch" href="gallery.html">
+    <i class="fas fa-link"></i>
+    <span>Students</span>
+  </a> -->
+
+  <a id="anch" href="events.html">
+     <i class="fas fa-calendar"></i>
+    <span>Events</span>
+  </a>
+  <!-- <a id="anch" href="about.html">
+    <i class="far fa-question-circle"></i>
+    <span>About</span>
+  </a>
+
+  <a id="anch" href="#fancy" onclick="fancy()">
+    <i class="far fa-envelope"></i>
+    <span>Contact</span>
+  </a> -->
+  <a href="profile.html" id="anch" onclick="settings()">
+    <i class="far fa-envelope"></i>
+    <span>Profile</span>
+  </a>
+</div>
+        </div>
+        <nav id="menu">
+            <ul>
+                <li ><a href="index.html" >DashBoard</a></li>
+                <li><a href="cuorses.html">Courses</a></li>
+                <!-- <li><a href="gallery.html" >students</a></li> -->
+             </ul>
+            <ul>
+                <li><a href="events.html">Events</a></li>
+                <!-- <li><a href="about.html" >About</a></li> -->
+                <!-- <li><a href="#fancy" class="get-contact" onclick="fancy()">Contact</a></li> -->
+                <li class="current"><a href="profile.html" >Profile</a></li>
+
+               </ul>
+        </nav>
+        <!-- / navigation-->
+    </div>
+    <!-- / container 
+
+
+</header> -->
+<div class="mainProfile">
+    <div class="coverpho">
+        <img src="Images copy/mine.jpg" alt="">
+    </div>
+
+    <div class="profile">
+		<h1>	<em id="profim"><img src="Images copy/mine.jpg" onclick="profileImg()" alt=""></em>
+            <!-- <em id="profimadd" onclick="addImage()">
+            <img src="/Images copy/enrolled.png" alt="">
+            </em> -->
+            <div class="bio">
+            <pre><p id="userName"> userName:</p></pre>
+            <p id="regNo">regNo:</p>
+      
+
+            <!-- <p id="Bio"></p> -->
+        <script>
+                
+            
+            const userName = "Favour Peter";
+            
+            const regNo = 12345;
+
+           // const Bio = "about me";
+            
+            document.getElementById("userName").innerHTML= userName;
+            
+            document.getElementById("regNo").innerHTML= regNo;
+            
+
+            // document.getElementById("Bio").innerHTML= Bio; -->
+
+
+            
+        </script>
+        </div>
+		</div>
+</div>
+<div class="content">
+    <div class="title">
+            <h2>result</h2>
+</div>
+    <div class="result">
+             <div class="resContent">
+                 <div class="le100">
+                    <p id="reHead">Result for 100 level</p>
+                    <div id="res100">
+                        <p>This file contains the summary of your result</p>
+                        <button><a href="c++tutorial.pdf" target="blank">Open File</a></button>
+                    </div>
+                 </div>
+
+                <div class="le200">
+                    <p id="reHead">Result for 200 level</p>
+                    <div id="res100">
+                        <p>This file contains the summary of your result</p>
+                        <button><a href="c++tutorial.pdf" target="blank">Open File</a></button>
+                    </div>
+                 </div>
+                
+                
+                 <div class="le300">
+                    <p id="reHead">Result for 300 level</p>
+                    <div id="res100">
+                        <p>This file contains the summary of your result</p>
+                        <button><a href="c++tutorial.pdf" target="blank">Open File</a></button>
+                    </div>
+                 </div>
+                
+                
+                <div class="le400">
+                    <p id="reHead">Result for 400 level</p>
+                    <div id="res100">
+                        <p>This file contains the summary of your result</p>
+                        <button><a href="c++tutorial.pdf" target="blank">Open File</a></button>
+                    </div>
+                 </div>
+                
+                
+                <div class="le500">
+                    <p id="reHead">Result for 500 level</p>
+                    <div id="res100">
+                        <p>This file contains the summary of your result</p>
+                        <button><a href="c++tutorial.pdf" target="blank">Open File</a></button>
+                    </div>
+                 </div>
+                                 
+                <div class="le500">
+                    <p id="reHead">Result for 600 level</p>
+                    <div id="res100">
+                        <p>This file contains the summary of your result</p>
+                        <button><a href="c++tutorial.pdf" target="blank">Open File</a></button>
+                    </div>
+                 </div>
+                
+                
+
+
+             </div>
+    </div>
+</div>
+<footer id="footer">
+    <div class="container">
+        <section>
+            <article class="col-1">
+                <h3>Contact</h3>
+                <ul>
+                    <li class="address"><a href="#">contact us at the various <br>JPTS centers</a></li>
+                    <li class="mail"><a href="mailto:peterpaultolulope@gmail.com">peterpaultolulope@gmail.com</a></li>
+                    <li class="phone last"><a href="tel:08109080838">08109080838</a></li>
+                </ul>
+            </article>
+            <article class="col-2">
+                <h3>Forum topics</h3>
+                <ul>
+                    <li><a href="#">Malaria</a></li>
+                    <li><a href="#">Robotics And AI intense</a></li>
+                    <li><a href="#">Politics</a></li>
+                    <li><a href="#">First Aid</a></li>
+                    <li class="last"><a href="#">Architect vitae  </a></li>
+                </ul>
+            </article>
+            <article class="col-3">
+                <h3>Social media</h3>
+                <p>You can contact us at this social media</p>
+                <ul>
+                    <li class="facebook"><a href="#">Facebook</a></li>
+                    <li class="google-plus"><a href="#">Google+</a></li>
+                    <li class="twitter"><a href="#">twittme9770</a></li>
+                    <li class="pinterest"><a href="#">Pinterest</a></li>
+                </ul>
+            </article>
+            <article class="col-4">
+                <h3>Newsletter</h3>
+                <p>Write a NewsLetter....</p>
+                <form action="#">
+                    <input placeholder="Email address..." type="text">
+                    <button id="subscribe" style="background-color: rgba(230, 18, 18, 0.596);" type="submit">Subscribe</button>
+                </form>
+                <ul>
+                    <li><a href="#"></a></li>
+                </ul>
+            </article>
+        </section>
+        
+        <p class="copy">Copyright 2022 JPTS ins. Designed by <a href="http://www.vandelaydesign.com/" title="Designed by Vandelay Design" target="_blank">paul</a>. All rights reserved.</p>
+    </div>
+    <!-- / container -->
+</footer>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>window.jQuery || document.write("<script src='js/jquery-1.11.1.min.js'>\x3C/script>")</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+</div>
+</body>
+</html>

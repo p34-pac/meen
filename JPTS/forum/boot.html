@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Bootcampand Forums</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<link rel="stylesheet" media="all" href="css/style.css">
+	<link rel="shortcut icon" href="undrop.png">
+	<script src="fancy.js"></script>
+    <style>
+        .container{
+            background-color: rgb(209, 241, 241);
+            width: 90%;
+            height: 400px;
+            margin: 5%;
+            border-radius: 20px;
+            cursor: default;
+        }
+        .contain{
+            background: rgba(41, 77, 77, 0.301) url("undrop.png") no-repeat 1px;
+            width: 80%;
+            height: 300px;
+            position: absolute;
+            left: 10%;
+            top: 10%;
+            border-radius: 10px;
+
+        }
+        .me{
+            display: flex;
+            justify-content: center;
+            margin-top: 70%;
+            margin-bottom: 10px;
+            color: rgba(0, 0, 0, 0.678);
+            font-weight: bolder;
+            font-size: x-large;
+        }
+        .me p img{
+            width: 50px;
+            filter: grayscale(10);
+        }
+   
+    </style>
+</head>
+<body onload="load()">
+    <script>
+        function load(){
+           var conf = confirm("no content do you  do you wish to continue");
+           if(conf == true){
+            alert("true")
+           }else{
+            alert("false")
+
+           }
+            
+        }
+    </script>
+    
+    <div class="container">
+        <div class="contain">
+            <div class="me">
+                   <p> <img src="ic_chats_backup_error.png" alt="">no content available</p>     
+            </div>
+        </div>
+    </div>
+</body>
+</html>

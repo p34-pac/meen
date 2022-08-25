@@ -1,0 +1,313 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Open+Sans:600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+
+.contor{
+	z-index:10;
+}
+
+.sidebar{
+  position: fixed;
+  width: 240px;
+  left: -240px;
+  height: 100%;
+  background: #1e1e1e;
+  transition: all .5s ease;
+}
+.sidebar header{
+  font-size: 28px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #1b1b1b;
+  user-select: none;
+  font-family: 'Montserrat', sans-serif;
+}
+.sidebar #anch{
+  display: block;
+  height: 65px;
+  width: 100%;
+  color: white;
+  line-height: 65px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  border-left: 5px solid transparent;
+  font-family: 'Open Sans', sans-serif;
+  transition: all .5s ease;
+}
+#anch.active,#anch:hover{
+  border-left: 5px solid #b93632;
+  color: #b93632;
+}
+.sidebar #anch i{
+  font-size: 23px;
+  margin-right: 16px;
+}
+.sidebar #anch span{
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#check{
+  display: none;
+}
+label #btn{
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #26262600;
+  margin: 15px 30px;
+  font-size: 29px;
+  background: #2c416700 url(../images/menu.png) no-repeat 50% ;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  line-height: 45px;
+  transition: all .5s ease;
+  
+}
+label #cancel{
+  opacity: 0;
+  position: fixed;
+  object-fit: cover;
+  cursor: pointer;
+  color: white;
+  border-radius: 50%;
+  background: #2c416700 url(../images/menu.png) no-repeat 50% ;
+  height: 45px;
+  width: 45px;
+  top: 10px;
+  text-align: center;
+  line-height: 45px;
+  transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  margin-left: 10px;
+  opacity: 1;
+  visibility: visible;
+  background: #2c4167 url(../images/menu.png) no-repeat;
+
+}
+#check:checked ~ label #cancel{
+  margin-left: 190px;
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+  background: #2c4167 url(../images/ico_close.png) no-repeat 50% 0;
+}
+@media(min-width : 650px){
+
+  .sidebar{
+    height: auto;
+	display: none;
+    width: 70px;
+    left: 0;
+    margin: 100px 0;
+  }
+  header,#btn,#cancel{
+    display: none;
+  }
+  span{
+    position: absolute;
+	display: none;
+    margin-left: 23px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .sidebar #anch{
+    height: 60px;
+	display: none;
+  }
+  .sidebar #anch i{
+    margin-left: -10px;
+	display: none;
+  }
+  #anch:hover {
+    width: 200px;
+	display: none;
+    background: inherit;
+  }
+  .sidebar #anch:hover span{
+    opacity: 1;
+	display: none;
+    visibility: visible;
+  }
+  h2{
+      display: flex;
+  }
+  
+}
+
+
+
+
+
+
+@media (min-width: 100px){
+    *{
+            
+    }
+body{
+    
+    background-color: rgba(215, 226, 235, 0.849);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+#cancel{
+   
+    margin-left: 35%;
+   
+}
+
+#open{
+    float: right;
+    
+}
+
+#rolled{
+ 
+    float: right;
+    
+
+    
+}
+
+.menu{
+    display: none;
+    position: fixed;
+    left: 80%;
+    background-color: rgb(111, 173, 228);
+    border: 2px solid black;
+    width: 100px;
+    text-align: center;
+    
+
+}
+
+.unmenu{
+    position: fixed;
+    left: 80%;
+    width: 100px;
+    
+
+
+}
+
+.menu a{
+    text-decoration: none;
+    color: black;
+    
+   
+    
+}
+
+
+.courses{
+    color: rgb(44, 26, 13);
+    border-bottom: 2px solid rgb(67, 67, 90);
+    
+  
+
+}
+.courses:hover{ 
+   font-family: cursive;
+    color: rgb(17, 8, 2);
+    border-bottom: 5px solid rgb(28, 28, 206);
+    
+    font-size: 100%;
+    
+  
+
+}
+
+.courses h2:hover{
+    background-color: rgba(83, 95, 91, 0.315);
+}
+
+.bottom{
+    background-color: rgb(105, 100, 100);
+    text-align: center;
+    color: rgb(61, 27, 27);
+    border-radius: 10px;
+    font-weight: 1000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 90%;
+    height: 45%;
+    position: absolute;
+    left: 5%;
+    
+}
+
+.bottom a{
+    text-decoration: none;
+    color: rgb(2, 46, 54);
+    z-index: -1;
+    
+}
+
+#unenrolled{
+    background: none;
+    color: rgba(61, 27, 27, 0.712);
+    
+}
+
+#enrolled{
+    background: none;
+    
+}
+
+#sub-options{
+    display: none;
+    
+} 
+
+#sub-options1{
+    display: none;
+    
+} 
+
+#sub-options2{
+    display: none;
+    
+} 
+
+#sub-options3{
+    display: none;
+    
+} 
+
+#sub-options4{
+    display: none;
+    
+} 
+
+#sub-options5{
+    display: none;
+    
+} 
+}
+
+@media (min-width: 900px) {
+    
+.unmenu{
+    position: fixed;
+    left: 90%;
+    transition-duration: 2s;
+}
+body{
+    background-color: rgb(191, 219, 219);
+    transition-duration: 2s;
+
+}
+}

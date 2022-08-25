@@ -1,0 +1,71 @@
+<html>
+<body>
+<script type="text/javascript">
+/*
+var grade=prompt("your grade");
+document.write("Entering switch block<br />");
+switch (grade)
+{
+ case 'A': document.write("Good job<br />");
+break;
+ case 'B': document.write("Pretty good<br />");
+ break;
+ case 'C': document.write("Passed<br />");
+ break;
+ case 'D': document.write("Not so good<br />");
+ break;
+ case 'F': document.write("Failed<br />");
+ break;
+ default: document.write("Unknown grade<br />")
+}
+document.write("Exiting switch block");*
+
+var count = 0;
+var pass = 1;
+document.write("Starting Loop ");
+while (count < pass){
+ document.write("Current Count : " + count + "<br />");
+ count++;
+}
+document.write("Loop stopped!");
+
+var count = 0.1;
+document.write("Starting Loop" + "<br />");
+do{
+ document.write("Current Count : " + count + "<br />");
+ -count;
+}while (count > 0);
+document.write ("Loop stopped!");
+
+var aProperty;
+document.write("Navigator Object Properties<br /> ");
+for (aProperty in navigator)
+{
+ document.write(aProperty);
+ document.write("<br />");
+}*/
+
+function hypotenuse(a, b) {
+ function square(x) { return x*x; }
+ 
+ return Math.sqrt(square(a) + square(b));
+}
+function secondFunction(){
+ var result;
+ result = hypotenuse(1,2);
+ document.write ( result );
+}
+
+
+
+
+</script>
+<form> 
+    <input type="text" onclick="secondFunction()" value="Call Function"> 
+    </form>
+<p>Set the variable to different value and then try...</p>
+<form>
+    <input type="button" value="Print" onclick="window.prompt('moda fucker')" />
+    </form>
+</body>
+</html>

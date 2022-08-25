@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="lightblue">
+    <title>Courses</title>
+    <link rel="stylesheet" href="course.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="./Images copy/courses.ico" type="image/x-icon">
+    <script src="courses.js"></script>
+    <script src="fancy.js"></script>
+    <style>
+        #video1{
+            display: none;
+            padding: 5%;
+            margin: 5%;
+            background-color: bisque;
+            width: 100%;
+        }
+        #video a{
+            text-decoration: none;
+
+
+        }
+        #video a::after{
+            content: "‣";
+            font-size: 50px;
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 2px solid grey;
+
+
+
+        }
+        #video video{
+            width: 300px;
+            height: auto;
+            padding: 5%;
+            border: 5px solid grey;
+        }
+        #video1 video:active{
+            border: 5px solid grey;
+        }
+        #enrolled a:hover{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <header id="header">
+		<div class="contor">
+			<p id="logo"><img src="./images/jpts.png"></p>
+			<div class="menu-trigger">
+				<input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+      <header> Menu</header>
+	  <a id="anch" href="index.html">
+        <i class="fas fa-sliders-h"></i>
+        <span>DashBoard</span>
+      </a>
+      <a id="anch" href="cuorses.html" class="active" >
+        <i class="fas fa-qrcode"></i>
+        <span>Courses</span>
+      </a>
+      <!-- <a id="anch" href="gallery.html">
+        <i class="fas fa-link"></i>
+        <span>Students</span>
+      </a> -->
+
+      <a id="anch" href="events.html">
+         <i class="fas fa-calendar"></i>
+        <span>Events</span>
+      </a>
+      <!-- <a id="anch" href="about.html" >
+        <i class="far fa-question-circle"></i>
+        <span>About</span>
+      </a> -->
+
+      <!-- <a id="anch" href="#fancy" onclick="fancy()">
+        <i class="far fa-envelope"></i>
+        <span>Contact</span>
+      </a> -->
+	  <a href="profile.html" id="anch" onclick="settings()">
+        <i class="far fa-envelope"></i>
+        <span>Profile</span>
+      </a>
+    </div>
+			</div>
+			<nav id="menu">
+				<ul>
+					<li><a href="index.html" >DashBoard</a></li>
+					<li class="current"><a href="cuorses.html">Courses</a></li>
+ 				</ul>
+				<ul>
+					<!-- <li><a href="about.html" >About</a></li> -->
+                    <li><a href="events.html">Events</a></li>
+
+					<!-- <li><a href="#fancy" class="get-contact" onclick="fancy()">Contact</a></li> -->
+					<li><a href="profile.html">Profile</a></li>
+
+   				</ul>
+			</nav>
+			<!-- / navigation -->
+		</div>
+		<!-- / container -->
+	
+	</header>
+
+<div id="myCourses" style="display: block;">
+    <h1 id="course">My Courses</h1>
+ 
+    <hr>
+    <div class="course">
+    <div class="examcourse">
+        <ul class="courses" id="enrolled">
+            <img id="rolled" src="./Images copy/enrolled.png" width="50px" height="auto" style="border-radius: 50%;" alt="enrolled">enrolled
+            <h2 title="CHM101"><h2 onclick="drop()"id="CHM">General Chemistry </h2> <img src="./Images copy/drop.png" alt="drop-down" height="10px"width="10px">
+                <ul>
+                <div id="sub-options">
+                    <li title="CHM101 Lectures">  
+                        <a id="anch" href="#lectures1" onclick="lecturesCHM()">
+                        <i class="far fa-envelope"></i>
+                        <p> lectures</p>
+                      </a>
+                    </li>
+                  
+                    <li title="CHM101 Tests And Exams">  
+                        <a id="anch" href="#">
+                        <i class="far fa-envelope"></i>
+                        <p>Tests And Exams</p>
+                      </a>
+                    </li>
+
+                    <li title="About CHM101">
+                        <a id="anch" href="#">
+                            <i class="far fa-envelope"></i>
+                            <p> About Course</p>
+                          </a>
+                        </li>
+                        
+                </div>
+            </ul>
+        </h2>
+        </ul>
+        <ul class="courses" id="unenrolled" onclick="check()">
+         <img id="rolled" src="./Images copy/unenrolled.png" width="50px" height="auto" style="border-radius: 50%;" alt="unenrolled">unenrolled
+            <h2 title="PHY101"><h2 onclick="drop1()"id="PHY">General Physics</h2>  <img src="./Images copy/undrop.png" alt="drop-down" height="10px"width="10px">
+                <ul>
+                <div id="sub-options1">
+                    <li title="PHY101 Lectures">
+                        <a id="anch" href="#lectures1" onclick="lecturesPHY()">
+                            <i class="far fa-envelope"></i>
+                            <p> lectures</p>
+                          </a>
+                    </li>
+
+                    <li title="PHY101 Tests And Exams">
+                        <a id="anch" href="#">
+                            <i class="far fa-envelope"></i>
+                            <p> Tests And Exams</p>
+                          </a>
+                        
+                    </li>
+                    <li title="About PHY101">
+                        <a id="anch" href="#">
+                            <i class="far fa-envelope"></i>
+                            <p> About Course</p>
+                          </a>
+                        
+                    </li>
+                </div>
+            </ul>
+            </h2>
+        </ul>
+        <ul class="courses" id="enrolled">
+            <img id="rolled" src="./Images copy/enrolled.png" width="50px" height="auto" style="border-radius: 50%;" alt="enrolled">enrolled
+            <h2 title="BAM121"><h2 onclick="drop2()"id="BAM">Principles of Management</h2> <img src="./Images copy/drop.png" alt="drop-down" height="10px"width="10px">
+                <ul>
+                <div id="sub-options2">
+                    <li title="BAM121 Lectures">
+                        <a id="anch" href="#lectures1" onclick="lecturesBAM()">
+                            <i class="far fa-envelope"></i>
+                            <p> lectures</p>
+                          </a>
+                    </li>
+
+                    <li title="BAM121 Tests And Exams">
+                        <a id="anch" href="#">
+                            <i class="far fa-envelope"></i>
+                            <p>Tests And Exams </p>
+                          </a>
+                        </li>
+
+                    <li title="About BAM121">
+                        <a id="anch" href="#">
+                            <i class="far fa-envelope"></i>
+                            <p>About Course </p>
+                          </a>
+                        </li>
+
+                </div>
+            </ul>
+            </h2>
+        </ul>
+        <ul class="courses" id="unenrolled" onclick="check()">
+            <img id="rolled" src="./Images copy/unenrolled.png" width="50px" height="auto" style="border-radius: 50%;" alt="unenrolled">unenrolled
+            <h2 title="HGN131"><h2 onclick="drop3()"id="HGN">Use of English</h2> <img src="./Images copy/undrop.png" alt="drop-down" height="10px"width="10px">
+                <ul>
+                <div id="sub-options3">
+                    <li title="HGN131 Lectures">
+                        <a id="anch" href="#lectures1" onclick="lecturesHGN()">
+                            <i class="far fa-envelope"></i>
+                            <p> lectures</p>
+                          </a>
+                        </li>
+
+                    <li title="HGN131 Tests And Exams">
+                        <a id="anch" href="#">
+                            <i class="far fa-envelope"></i>
+                            <p> Tests And Exams</p>
+                          </a>
+                        </li>
+
+                    <li title="About HGN131">
+                        <a id="anch" href="#">
+                            <i class="far fa-envelope"></i>
+                            <p> About Course</p>
+                          </a>
+                        </li>
+
+
+                </div>
+            </ul>
+            </h2>
+        </ul>
+        <ul class="courses" id="enrolled">
+            <img id="rolled" src="./Images copy/enrolled.png" width="50px" height="auto" style="border-radius: 50%;" alt="enrolled">enrolled
+            <h2 title="MGH101"><h2 onclick="drop4()"id="MGH">Engineering Maths and Graphics </h2><img src="./Images copy/drop.png" alt="drop-down" height="10px"width="10px">
+                <ul>
+                <div id="sub-options4">
+                    <li title="MGH101 Lectures">
+                        <a id="anch" href="#lectures1" onclick="lecturesMGH()">
+                            <i class="far fa-envelope"></i>
+                            <p> lectures</p>
+                          </a>
+                        </li>
+
+                    <li title="MGH101 Tests And Exams">  <a id="anch" href="#">
+                        <i class="far fa-envelope"></i>
+                        <p>Tests And Exams</p>
+                      </a>
+                    </li>
+
+                    <li title="About MGH101">  <a id="anch" href="#">
+                        <i class="far fa-envelope"></i>
+                        <p> About Course</p>
+                      </a>
+                    </li>
+
+                </div>
+            </ul>
+            </h2>
+        </ul>
+
+        <ul class="courses" id="unenrolled" onclick="check()">
+            <img id="rolled" src="./Images copy/unenrolled.png" width="50px" height="auto" style="border-radius: 50%;" alt="unenrolled">unenrolled
+            <h2 title="FCS141"><h2 onclick="drop5()" id="FCS">Computer and Statistics</h2> <img src="./Images copy/undrop.png" alt="drop-down" height="10px"width="10px">
+                <ul>
+                <div id="sub-options5">
+                    <li title="FCS141 Lectures">
+                        <a id="anch" href="#lectures1" onclick="lecturesFCS()">
+                            <i class="far fa-envelope"></i>
+                            <p> lectures</p>
+                          </a>
+                        </li>
+
+                    <li title="FCS141 Tests And Exams">  
+                      <a id="anch" href="#">
+                        <i class="far fa-envelope"></i>
+                        <p>  Tests And Exams</p>
+                      </a>
+                     </li>
+
+                    <li title="About FCS141">
+                        <a id="anch" href="#">
+                            <i class="far fa-envelope"></i>
+                            <p>About Course </p>
+                          </a>
+                        </li>
+
+                </div>
+            </ul>
+            </h2>
+        </ul>
+
+    </div>
+
+    
+    </div>
+</div>
+
+
+
+<div class="alllec" id="lectures1" style="display: none; margin-top: 20%;">
+
+
+	
+    <span> <h1 style="display: block;">lectures material for<span id="courseName"></span></h1></span>
+    
+<ul id="material">
+
+    <div class="lec-vid">
+        <h2 style="text-align: center;">lecture videos </h2> 
+        <a style="text-align: center;" href="#video" onclick="dropVid()">open lecture videos</a>
+
+        
+            <div id="sub-options-vid">
+            <li id="video">
+                <ul >
+                    <li><a href="#video1" onclick="vid()">lecture video 1</a></li>
+                    <li><a href="#video1" onclick="vid()">lecture video 2</a></li>
+                    <li><a href="#video1" onclick="vid()">lecture video 3</a></li>
+                    <li><a href="#video1" onclick="vid()">lecture video 4</a></li>
+                    <li><a href="#video1" onclick="vid()">lecture video 5</a></li>
+                    <li><a href="#video1" onclick="vid()">lecture video 6</a></li>
+                    <li><a href="#video1" onclick="vid()">lecture video 7</a></li>
+                    <li><a href="#video1" onclick="vid()">lecture video 8</a></li>
+                    <li><a href="#video1" onclick="vid()">lecture video 9</a></li>
+                    <li><a href="#video1" onclick="vid()">lecture video 10</a></li>
+                </ul>
+            </li>
+            <div id="video1">
+                <video src="vid.mp4" width="70%" controls >moonknight</video>
+            </div> 
+
+                    
+            </div>
+
+        </div>
+
+    <div class="lec-notes">
+        <h2>lecture notes</h2> 
+        <a style="text-align: center;" href="#notes" onclick="dropNotes()">open lecture notes </a>
+        <div id="sub-options-notes">
+            <li id="notes">
+                <ul >
+                    <li><a href="#">lecture notes based on video 1</a></li> 
+                    <li><a href="#">lecture notes based on video 2</a></li>
+                    <li><a href="#">lecture notes based on video 3</a></li>
+                    <li><a href="#">lecture notes based on video 4</a></li>
+                    <li><a href="#">lecture notes based on video 5</a></li>
+                    <li><a href="#">lecture notes based on video 6</a></li>
+                    <li><a href="#">lecture notes based on video 7</a></li>
+                    <li><a href="#">lecture notes based on video 8</a></li>
+                    <li><a href="#">lecture notes based on video 9</a></li>
+                    <li><a href="#">lecture notes based on video 10</a></li>
+                    <li><a href="#">general note</a></li>
+                </ul>
+            </li>
+        </div>
+
+    </div>
+
+</ul>
+
+
+
+</div>
+
+<footer id="footer">
+    <div class="container">
+        <section>
+            <!-- <article class="col-1">
+                <h3>Contact</h3>
+                <ul>
+                    <li class="address"><a href="#">contact us at the various <br>JPTS centers</a></li>
+                    <li class="mail"><a href="mailto:peterpaultolulope@gmail.com">peterpaultolulope@gmail.com</a></li>
+                    <li class="phone last"><a href="tel:08109080838">08109080838</a></li>
+                </ul>
+            </article> -->
+            <!-- <article class="col-2">
+                <h3>Forum topics</h3>
+                <ul>
+                    <li><a href="#">Malaria</a></li>
+                    <li><a href="#">Robotics And AI intense</a></li>
+                    <li><a href="#">Politics</a></li>
+                    <li><a href="#">First Aid</a></li>
+                    <li class="last"><a href="#">Architect vitae  </a></li>
+                </ul>
+            </article> -->
+				<!-- <article class="col-3">
+					<h3>Social media</h3>
+					<p>You can contact us at this social media</p>
+					<ul>
+						<li class="facebook"><a href="#">Facebook</a></li>
+						<li class="google-plus"><a href="#">Google+</a></li>
+						<li class="twitter"><a href="#">twittme9770</a></li>
+						<li class="pinterest"><a href="#">Pinterest</a></li>
+					</ul>
+				</article>-->
+            <!-- <article class="col-4"> 
+                <h3>Newsletter</h3>
+                <p>Write a NewsLetter....</p>
+                <form action="#">
+                    <input placeholder="Email address..." type="text">
+                    <button id="subscribe" style="background-color: rgba(230, 18, 18, 0.596);" type="submit">Subscribe</button>
+                </form>
+                <ul>
+                    <li><a href="#"></a></li>
+                </ul>
+            </article> -->
+        </section>
+        <!-- <div id="fancy">
+            <h2>Request information</h2>
+            <form action="#">
+                <div class="left">
+                    <fieldset class="mail"><input placeholder="Email address..." type="text"></fieldset>
+                    <fieldset class="name"><input placeholder="Name..." type="text"></fieldset>
+                    <select class="subject" onclick="addOption()" id="add">
+                        <option id="added">Choose subject...</option>
+                        <option>Choose subject...</option>
+                        <option>Choose subject...</option>
+                        <option value="more" ><p>more...</p> </option>
+                    </select>
+                </div>
+                <div class="right">
+                    <fieldset class="question"><textarea placeholder="Question..."></textarea></fieldset>
+                </div>
+                <div class="btn-holder">
+                    <button class="btn blue" type="submit">Send request</button>
+                </div>
+            </form> 
+        </div>-->
+        <p class="copy">Copyright 2022 JPTS ins. Designed by <a href="http://www.vandelaydesign.com/" title="Designed by Vandelay Design" target="_blank">paul</a>. All rights reserved.</p>
+    </div>
+    <!-- / container -->
+</footer>
+<!-- / footer -->
+
+</body>
+</html>
